@@ -4,11 +4,20 @@ body {
 }
 .logo_svg{
     margin: 20px;
-    width: 10px;
+}
+.logo-main{
+    width: 270px;
+}
+.left_bar{
+    display: none;
+}
+.logo_2{
+    display: none;
 }
 /* Flexbox для главной секции */
 .headSection {
     display: flex;
+    height: 105.797px;
     align-items: center;
     justify-content: space-between; /* Добавляет пространство между логотипом и меню */
     padding: 0 20px; /* Добавляем отступы по бокам */
@@ -45,37 +54,35 @@ body {
 .menu > li {
     position: relative;
     margin-left: 20px; /* Отступ между пунктами меню */
+    letter-spacing: 0.04px;
 }
 
 .menu > li > a {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-decoration: none;
     color: black;
     font-weight: bold; /* Полужирный текст */
-    font-size: 16px; /* Размер шрифта */
+    font-size: 18px; /* Размер шрифта */
+    letter-spacing: 0.04px;
 }
+/* Стили для выпадающего меню  */
 
-.menu > li > a:hover {
-    color: red; /* Цвет текста при наведении */
-}
-
-.arrow {
-    font-size: 12px;
-    margin-left: 5px;
-}
-
-/* Стили для выпадающего меню */
 .submenu {
     list-style: none;
     margin: 0;
-    padding: 0;
+    /* padding: 0 0 0 0; */
+    padding-top: 20px;
+    padding-left: 0;
     position: absolute;
     top: 100%;
     left: 0;
     display: none; /* Скрыть подменю по умолчанию */
     background-color: white; /* Фон для подменю */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Тень для подменю */
+    font-weight: bold; /* Полужирный текст */
+    font-size: 16px; /* Размер шрифта */
+    letter-spacing: 0.04px;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); Тень для подменю */
 }
 
 .submenu li {
@@ -84,17 +91,131 @@ body {
 
 .submenu li a {
     display: block;
-    padding: 10px 20px;
+    padding: 5px 10px;
     text-decoration: none;
     color: black;
-    font-size: 14px; /* Размер шрифта для подменю */
+    font-size: 16px; /* Размер шрифта для подменю */
 }
 
 .submenu li a:hover {
-    background-color: #ddd; /* Фон при наведении */
+    color: red;
 }
 
 /* Показать подменю при наведении */
 .menu > li:hover .submenu {
     display: block;
+}
+
+@media (min-width: 1950px) {
+    .logo_svg{
+        margin: 20px;
+        padding-left: 20%;
+    }
+
+    .nav_menu {
+        padding-right: 20%;
+    }
+
+
+}
+
+@media (max-width: 1000px) {
+    .logo-main{
+        width: 101.55px;
+        margin: 0;
+        margin-left: -5px;
+        padding-left: 0;
+    }
+    .logo_2{
+        display: flex;
+    }
+    .logo_1{
+        display: none;
+    }
+    
+
+    .nav_menu {
+        display: none;
+    }
+
+    .headSection {
+        height: 50px;
+        justify-content: left;
+    }
+
+    .left_bar{
+        display: flex;
+        margin-left: -10px;
+    }
+    .bar{
+        height: 32px;
+        width: 32px;
+    }
+}
+
+
+
+
+
+
+.cross_header{
+    height: 50px;
+    border-bottom: 1px solid #ddd; /* Нижняя граница */
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+.hide_menu{
+    position: fixed;
+    top: 0;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+}
+.logo-main_2{
+    width: 101.55px;
+    display:flow-root;
+    margin-left: 57px;
+    margin-top: -35px;
+}
+.close-icon {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    padding-top: 0px;
+    margin-top: -20px;
+    margin-left: 0px;
+}
+.cross{
+    width: 48px;
+    height: 48px;
+}
+.hide_menu.open {
+    right: 0;
+}
+.hide_menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hide_menu ul li {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.hide_menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
 }
