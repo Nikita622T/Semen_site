@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+.logo_svg{
+    margin: 20px;
+    width: 10px;
+}
+/* Flexbox для главной секции */
+.headSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Добавляет пространство между логотипом и меню */
+    padding: 0 20px; /* Добавляем отступы по бокам */
+    background-color: white; /* Фон для верхней панели */
+    border-bottom: 1px solid #ddd; /* Нижняя граница */
+}
+
+/* Логотип и текстовая секция */
+.logo_section {
+    /* display: flex; */
+    align-items: center;
+}
+
+.link_logo img {
+    display: block;
+    max-height: 100px; /* Задайте нужную высоту для логотипа */
+    height: auto;
+}
+
+/* Стили для главного меню */
+.nav_menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu > li {
+    position: relative;
+    margin-left: 20px; /* Отступ между пунктами меню */
+}
+
+.menu > li > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold; /* Полужирный текст */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.menu > li > a:hover {
+    color: red; /* Цвет текста при наведении */
+}
+
+.arrow {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Стили для выпадающего меню */
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; /* Скрыть подменю по умолчанию */
+    background-color: white; /* Фон для подменю */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Тень для подменю */
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px; /* Размер шрифта для подменю */
+}
+
+.submenu li a:hover {
+    background-color: #ddd; /* Фон при наведении */
+}
+
+/* Показать подменю при наведении */
+.menu > li:hover .submenu {
+    display: block;
+}
